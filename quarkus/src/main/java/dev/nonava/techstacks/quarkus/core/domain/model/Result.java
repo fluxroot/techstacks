@@ -78,7 +78,7 @@ public final class Result<R, F> {
 
     public F getFailure() {
         if (isPresent()) {
-            throw new NoSuchElementException(("No failure present"));
+            throw new NoSuchElementException("No failure present");
         }
         return failure;
     }
