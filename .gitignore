@@ -3,3 +3,8 @@
 /*/.gradle/
 /build/
 /*/build/
+
+# IntelliJ IDEA
+/.idea/
+/out/
+/*/out/
