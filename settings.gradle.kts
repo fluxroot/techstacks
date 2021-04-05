@@ -1,3 +1,6 @@
 rootProject.name = "techstacks"
 
-include("quarkus")
+include(
+    "quarkus",
+    "spring"
+)
