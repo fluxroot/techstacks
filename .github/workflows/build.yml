@@ -7,10 +7,12 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 11
+      - uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
       - run: ./gradlew :quarkus:build
         env:
           QUARKUS_CONTAINER_IMAGE_BUILD: true
           QUARKUS_CONTAINER_IMAGE_PUSH: true
           QUARKUS_CONTAINER_IMAGE_IMAGE: fluxroot/techstacks-quarkus:1.0.0
-          QUARKUS_CONTAINER_IMAGE_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
-          QUARKUS_CONTAINER_IMAGE_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
