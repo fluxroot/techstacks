@@ -53,7 +53,7 @@ jib {
         image = "gcr.io/distroless/java:11"
     }
     to {
-        image = "fluxroot/${project.name}"
+        image = "fluxroot/techstacks-spring"
         tags = setOf(project.version.toString())
     }
 }
