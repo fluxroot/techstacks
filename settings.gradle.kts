@@ -2,5 +2,6 @@ rootProject.name = "techstacks"
 
 include(
     "quarkus",
-    "spring"
+    "spring",
+    "ktor"
 )
