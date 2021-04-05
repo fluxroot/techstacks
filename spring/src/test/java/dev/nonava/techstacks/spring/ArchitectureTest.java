@@ -13,7 +13,7 @@ import com.tngtech.archunit.lang.ArchRule;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
-@AnalyzeClasses(packages = "dev.nonava.techstacks.quarkus")
+@AnalyzeClasses(packages = "dev.nonava.techstacks.spring")
 class ArchitectureTest {
     @ArchTest
     static final ArchRule forbidDependencyFromDomainToApplication = noClasses()
