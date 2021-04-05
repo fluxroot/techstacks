@@ -24,4 +24,8 @@ public final class Greeting implements Entity<Greeting> {
         this.id = Identity.of(Greeting.class);
         this.username = username;
     }
+
+    public String asString() {
+        return String.format("Hello %s!", username.getValue());
+    }
 }
