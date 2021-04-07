@@ -9,13 +9,9 @@ package dev.nonava.techstacks.spring.greeting.domain.model;
 
 import dev.nonava.techstacks.spring.core.domain.model.Entity;
 import dev.nonava.techstacks.spring.core.domain.model.Identity;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.ToString;
 
 @Getter
-@ToString
-@EqualsAndHashCode
 public final class Greeting implements Entity<Greeting> {
     private final Identity<Greeting> id;
     private final Username username;
