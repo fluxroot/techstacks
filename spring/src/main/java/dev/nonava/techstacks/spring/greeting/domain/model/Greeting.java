@@ -13,11 +13,10 @@ import lombok.Getter;
 
 @Getter
 public final class Greeting implements Entity<Greeting> {
-    private final Identity<Greeting> id;
+    private final Identity<Greeting> id = Identity.of(Greeting.class);
     private final Username username;
 
     public Greeting(Username username) {
-        this.id = Identity.of(Greeting.class);
         this.username = username;
     }
 
