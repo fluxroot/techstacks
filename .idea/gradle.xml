@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/ktor" />
             <option value="$PROJECT_DIR$/nest" />
             <option value="$PROJECT_DIR$/quarkus-imperative" />
+            <option value="$PROJECT_DIR$/quarkus-reactive" />
             <option value="$PROJECT_DIR$/spring-servlet" />
           </set>
         </option>
