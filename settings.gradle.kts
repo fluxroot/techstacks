@@ -1,7 +1,7 @@
 rootProject.name = "techstacks"
 
 include(
-    "quarkus",
+    "quarkus-imperative",
     "spring-servlet",
     "ktor",
     "nest"

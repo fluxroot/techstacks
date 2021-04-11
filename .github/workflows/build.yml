@@ -1,6 +1,6 @@
 on: [ push ]
 jobs:
-  build-quarkus:
+  build-quarkus-imperative:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,11 +11,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-      - run: ./gradlew :quarkus:build
+      - run: ./gradlew :quarkus-imperative:build
         env:
           QUARKUS_CONTAINER_IMAGE_BUILD: true
           QUARKUS_CONTAINER_IMAGE_PUSH: true
-          QUARKUS_CONTAINER_IMAGE_IMAGE: fluxroot/techstacks-quarkus:1.0.0
+          QUARKUS_CONTAINER_IMAGE_IMAGE: fluxroot/techstacks-quarkus-imperative:1.0.0
   build-spring-servlet:
     runs-on: ubuntu-latest
     steps:
