@@ -14,7 +14,7 @@
             <option value="$PROJECT_DIR$/ktor" />
             <option value="$PROJECT_DIR$/nest" />
             <option value="$PROJECT_DIR$/quarkus" />
-            <option value="$PROJECT_DIR$/spring" />
+            <option value="$PROJECT_DIR$/spring-servlet" />
           </set>
         </option>
       </GradleProjectSettings>
