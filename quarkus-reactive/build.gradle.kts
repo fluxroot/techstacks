@@ -14,7 +14,7 @@ dependencies {
 
     implementation(enforcedPlatform(Libs.quarkusPlatform))
     implementation(Libs.quarkusContainerImageJib)
-    implementation(Libs.quarkusRestEasyReactive)
+    implementation(Libs.quarkusRestEasyReactiveJackson)
 
     spotbugsPlugins(Libs.findSecBugs)
 
@@ -49,7 +49,7 @@ object Libs {
 
     const val quarkusPlatform = "io.quarkus:quarkus-universe-bom:1.12.2.Final"
     const val quarkusContainerImageJib = "io.quarkus:quarkus-container-image-jib"
-    const val quarkusRestEasyReactive = "io.quarkus:quarkus-resteasy-reactive"
+    const val quarkusRestEasyReactiveJackson = "io.quarkus:quarkus-resteasy-reactive-jackson"
 
     const val findSecBugs = "com.h3xstream.findsecbugs:findsecbugs-plugin:1.11.0"
 
