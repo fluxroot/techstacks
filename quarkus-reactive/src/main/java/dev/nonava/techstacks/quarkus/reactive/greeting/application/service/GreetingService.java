@@ -9,15 +9,14 @@ package dev.nonava.techstacks.quarkus.reactive.greeting.application.service;
 
 import dev.nonava.techstacks.quarkus.reactive.greeting.domain.model.Greeting;
 import dev.nonava.techstacks.quarkus.reactive.greeting.domain.model.Username;
-import io.smallrye.mutiny.Uni;
+import io.smallrye.mutiny.Multi;
 
 import javax.enterprise.context.ApplicationScoped;
-import java.util.List;
 
 @ApplicationScoped
 public class GreetingService {
-    public Uni<List<Greeting>> listGreetings() {
+    public Multi<Greeting> listGreetings() {
         var greeting = new Greeting(new Username("World"));
-        return Uni.createFrom().item(List.of(greeting));
+        return Multi.createFrom().item(greeting);
     }
 }

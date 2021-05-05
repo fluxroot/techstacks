@@ -9,7 +9,7 @@ package dev.nonava.techstacks.quarkus.reactive.greeting.infrastructure.resource;
 
 import dev.nonava.techstacks.quarkus.reactive.greeting.application.service.GreetingService;
 import dev.nonava.techstacks.quarkus.reactive.greeting.domain.model.Greeting;
-import io.smallrye.mutiny.Uni;
+import io.smallrye.mutiny.Multi;
 import lombok.Value;
 
 import javax.inject.Inject;
@@ -19,9 +19,6 @@ import javax.ws.rs.InternalServerErrorException;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.util.List;
-
-import static java.util.stream.Collectors.toList;
 
 @Path("/greetings")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -35,14 +32,10 @@ public class GreetingResource {
     }
 
     @GET
-    public Uni<List<GreetingData>> listGreetings() {
+    public Multi<GreetingData> listGreetings() {
         return greetingService
                 .listGreetings()
-                .onItem().transform(greetings ->
-                        greetings
-                                .stream()
-                                .map(GreetingData::of)
-                                .collect(toList()))
+                .onItem().transform(GreetingData::of)
                 .onFailure().transform(throwable -> new InternalServerErrorException());
     }
 
