@@ -1,0 +1,9 @@
+services:
+  database:
+    image: postgres:13.2
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - type: bind
+        source: ./postgres/build/pgdata
+        target: /var/lib/postgresql/data
