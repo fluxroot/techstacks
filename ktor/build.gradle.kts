@@ -5,15 +5,6 @@ plugins {
     id("com.google.cloud.tools.jib") version "2.8.0"
 }
 
-repositories {
-    jcenter {
-        content {
-            // TODO: Remove when kotlinx-html-jvm is available on Maven Central
-            includeModule("org.jetbrains.kotlinx", "kotlinx-html-jvm")
-        }
-    }
-}
-
 dependencies {
     implementation(Libs.kotlinxSerialization)
 
