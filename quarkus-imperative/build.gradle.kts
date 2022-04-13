@@ -2,23 +2,23 @@ plugins {
     java
     checkstyle
     pmd
-    id("com.github.spotbugs") version "4.7.0"
-    id("io.quarkus") version "1.12.2.Final"
+    alias(libs.plugins.spotbugs)
+    alias(libs.plugins.quarkus)
 }
 
 dependencies {
-    compileOnly(Libs.lombok)
-    annotationProcessor(Libs.lombok)
-    testCompileOnly(Libs.lombok)
-    testAnnotationProcessor(Libs.lombok)
+    compileOnly(libs.lombok)
+    annotationProcessor(libs.lombok)
+    testCompileOnly(libs.lombok)
+    testAnnotationProcessor(libs.lombok)
 
-    implementation(enforcedPlatform(Libs.quarkusPlatform))
-    implementation(Libs.quarkusContainerImageJib)
-    implementation(Libs.quarkusRestEasyJackson)
+    implementation(enforcedPlatform(libs.quarkusPlatform))
+    implementation(libs.quarkusContainerImageJib)
+    implementation(libs.quarkusRestEasyJackson)
 
-    spotbugsPlugins(Libs.findSecBugs)
+    spotbugsPlugins(libs.findSecBugs)
 
-    testImplementation(Libs.archUnit)
+    testImplementation(libs.archUnit)
 }
 
 java {
@@ -42,16 +42,4 @@ pmd {
 tasks.pmdTest {
     ruleSets = listOf()
     ruleSetConfig = resources.text.fromFile("$projectDir/config/pmd/test-ruleset.xml")
-}
-
-object Libs {
-    const val lombok = "org.projectlombok:lombok:1.18.18"
-
-    const val quarkusPlatform = "io.quarkus:quarkus-universe-bom:1.12.2.Final"
-    const val quarkusContainerImageJib = "io.quarkus:quarkus-container-image-jib"
-    const val quarkusRestEasyJackson = "io.quarkus:quarkus-resteasy-jackson"
-
-    const val findSecBugs = "com.h3xstream.findsecbugs:findsecbugs-plugin:1.11.0"
-
-    const val archUnit = "com.tngtech.archunit:archunit-junit5:0.17.0"
 }
