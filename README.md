@@ -1,7 +1,7 @@
 Awesome technology stacks
 =========================
 
-Copyright 2021 Phokham Nonava
+Copyright 2021-2022 Phokham Nonava
 
 
 License
