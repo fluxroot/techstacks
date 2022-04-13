@@ -7,9 +7,9 @@
 
 package dev.nonava.techstacks.quarkus.imperative.greeting.application.service;
 
-import dev.nonava.techstacks.quarkus.imperative.core.domain.model.Result;
 import dev.nonava.techstacks.quarkus.imperative.greeting.domain.model.Greeting;
 import dev.nonava.techstacks.quarkus.imperative.greeting.domain.model.Username;
+import io.github.fluxroot.result.Result;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.util.List;

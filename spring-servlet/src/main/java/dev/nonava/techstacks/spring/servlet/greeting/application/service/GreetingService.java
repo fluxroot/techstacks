@@ -7,9 +7,9 @@
 
 package dev.nonava.techstacks.spring.servlet.greeting.application.service;
 
-import dev.nonava.techstacks.spring.servlet.core.domain.model.Result;
 import dev.nonava.techstacks.spring.servlet.greeting.domain.model.Greeting;
 import dev.nonava.techstacks.spring.servlet.greeting.domain.model.Username;
+import io.github.fluxroot.result.Result;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

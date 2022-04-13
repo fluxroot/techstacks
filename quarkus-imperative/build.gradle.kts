@@ -15,6 +15,7 @@ dependencies {
     implementation(enforcedPlatform(libs.quarkusPlatform))
     implementation(libs.quarkusContainerImageJib)
     implementation(libs.quarkusRestEasyJackson)
+    implementation(libs.result)
 
     spotbugsPlugins(libs.findSecBugs)
 

@@ -20,6 +20,7 @@ quarkusContainerImageJib = { module = "io.quarkus:quarkus-container-image-jib" }
 quarkusPlatform = "io.quarkus:quarkus-universe-bom:1.12.2.Final"
 quarkusRestEasyJackson = { module = "io.quarkus:quarkus-resteasy-jackson" }
 quarkusRestEasyReactiveJackson = { module = "io.quarkus:quarkus-resteasy-reactive-jackson" }
+result = "io.github.fluxroot:result:1.0.0"
 springBootStarterTest = { module = "org.springframework.boot:spring-boot-starter-test" }
 springBootStarterWeb = { module = "org.springframework.boot:spring-boot-starter-web" }
 springBootStarterWebflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }

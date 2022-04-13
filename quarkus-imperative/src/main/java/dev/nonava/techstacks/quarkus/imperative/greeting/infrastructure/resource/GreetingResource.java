@@ -41,9 +41,8 @@ public class GreetingResource {
                                 .stream()
                                 .map(GreetingData::of)
                                 .collect(toList()))
-                .transform(
-                        greetingDataList -> Response.ok(greetingDataList).build(),
-                        e -> Response.serverError().build());
+                .map(greetingDataList -> Response.ok(greetingDataList).build())
+                .orElseGet(e -> Response.serverError().build());
     }
 
     @Value
