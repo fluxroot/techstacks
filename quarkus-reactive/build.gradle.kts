@@ -37,6 +37,7 @@ checkstyle {
 }
 
 pmd {
+    toolVersion = libs.versions.pmdVersion.get()
     ruleSets = listOf()
     ruleSetConfig = resources.text.fromFile("$projectDir/config/pmd/main-ruleset.xml")
 }

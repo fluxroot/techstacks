@@ -1,5 +1,6 @@
 [versions]
 kotlinVersion = "1.4.31"
+pmdVersion = "6.44.0"
 
 [libraries]
 archUnit = "com.tngtech.archunit:archunit-junit5:0.17.0"
